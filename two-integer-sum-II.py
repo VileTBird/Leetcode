@@ -1,3 +1,4 @@
+from collections import defaultdict, List
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
         lp, rp = 0, len(numbers) - 1
