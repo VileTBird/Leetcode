@@ -18,7 +18,7 @@ we just shift the right pointer past it ignoring it.
 
 on the other hand if our median is lesser than x we basically store it in our res variable, by design this binary search
 will run the entire loop all the way until it finds the biggest number that has a square smaller than x. 
-so when the loop ends our left pointer will be at the last number that has a square lesser than x
+so when the loop ends our result will be at the last number or the biggest number that has a square lesser than x
 
 the only extra case is when our median's square is equal to that of you know our target x, in that case which is the else conditional
 we just return true
