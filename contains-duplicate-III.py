@@ -1,6 +1,6 @@
 '''
 I wouldn't say this si the most optimal solution, technicalyl it works but the time complexity could be much better. i still 
-don't understand the solution for this problem, so ima just leave this here and come back to it later.
+don't understand the efficient solution for this problem, so ima just leave my inefficient solution here and come back to it later.
 '''
 
 class Solution(object):
