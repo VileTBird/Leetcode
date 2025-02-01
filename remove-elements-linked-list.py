@@ -18,18 +18,18 @@ and point its .next to our head and we place our curr pointer on our dummy node.
 and ofc in the end when we return it, we could just return dummy.next cus even if our head is problematic dummy would simply point
 to some other following node that doesnt equal target or itll pass to null either way it works for us. ez peasy
 '''
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+
 class Solution(object):
     def removeElements(self, head, val):
-        """
-        :type head: Optional[ListNode]
-        :type val: int
-        :rtype: Optional[ListNode]
-        """
+        '''CAUTION THIS SOLUTION IS BUGGY, ALTHOUGH ITS ACCEPTED BY LEETCODE IT HAS AN EDGE CASE OR A LOGIC ERROR, 
+        PRIMARILY WITH CHECKING THE FIRST HEAD NODE
+
+        so for example if curr.val is equal to our target value, itll be skipped or ignored and the logic with i is kinda flimsy
+        even though it works.
+
+        to fix the logic bug id prolly add a conditional at the start of the loop to check for curr.val if its equal we shift
+        to next or a nested while loop would be better imo. but im not doing either of that cus the second solution is better.
+        '''
         curr = head
         newHead = None
         i = 0
