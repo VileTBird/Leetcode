@@ -13,6 +13,8 @@ first negative element
 with that we minus from the length of the sub-array to find the count of negative numbers 
 
 we add it to our counter and easy peasy,
+
+whatever
 '''
 
 class Solution(object):
