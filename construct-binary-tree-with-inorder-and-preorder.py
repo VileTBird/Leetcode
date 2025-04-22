@@ -6,20 +6,15 @@
 #         self.right = right
 
 class Solution:
-    def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
-        array = []
+    def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
+        if not preorder or not inorder:
+            return None
 
-        def dfs(node):
-            if node is None:
-                return 0
+        root = TreeNode(preorder[0])
 
-            dfs(node.left)
-            array.append(node)
-            dfs(node.right)
+        m = inorder.index(preorder[0])
 
-        dfs(root)
-        return array[k - 1].val
-                    
-
-                
+        root.left = self.buildTree(preorder[1: m +1], inorder[:m + 1])
+        root.right = self.buildTree(preorder[m+1:], inorder[m+1:])
+        return root
         
